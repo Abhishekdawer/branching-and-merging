@@ -1,0 +1,441 @@
+                                        
+                                                                                                 output stream
+  
+   1.   fileoutputstream   2.ByteArrayOutput    3.filteroutputstream   4.pipedOutputstream  5.objectoutput stream
+                                            stream                     
+                                                                          i.) dataoutput Stream
+                                                                          ii.)bufferedOutput Stream
+                                                                          iii)pushback output stream
+
+                                                                                                Input stream
+
+    1. FileInputStream   2. ByteArrayInput     3. FileInputStream  4.PipedInputStream  5.objectInput stream
+                                            stream
+                                                                       i). byteInput stream
+                                                                       ii).bufferInput Stream
+                                                                       iii).pushback input stream
+
+                       
+                 input stream
+
+
+           method                                                                         syntax
+
+   1. mark()                                          public void mark(int arg)
+   2. read()                                           public abstract int read()
+   3.close()                                           public void close()
+   4.read()                                            public int read(byte[] arg)
+   5.reset()                                           public void reset()
+   6. markSupported()                         public boolean markSupported()
+   7. skip()                                           public long skip(long arg)
+
+
+   output stream
+
+     method                                                                    syntax
+1. write(int byte)                               public void write(int byte)
+2. write(byte[] buffer ,int offset,int maxlen)     public void write(byte[] buffer ,int offset,int maxlen) 
+3. toByteArray()        public byte[] toBytearray
+4. close()                     public void close()
+5. size()     public void size()
+6. read()        public void read()
+7. toString()    public String toString()
+8. toString(String charset Name)    public string toString(String charset name)
+
+
+  creating an object
+ 
+  real example of class and object
+   class: human    object: man,women
+   class:fruit          object: apple,banana
+   class:food         object:pizza,burger
+
+                                                                                     classes
+
+   # class is a group of similar objects.
+   # class is a logical entity.
+   # class is decleared once.
+   # class doesnot allocated memory when it is created.
+   # class is decleared using class keyword. 
+
+
+                                                                              object
+
+  #object is instance of class.
+  # object is physical entity.
+  # object is many times as per required.
+  # object allocates memory when it is created.
+  # object is created through new keyword mainly.
+
+
+                                                                                                  String
+
+   # there are two ways to create string object
+    1.  by string literal
+  for example:- String s= "welcome";
+
+    2. by  new keyword
+for ex:-    String s = new String("welcome");
+
+                                                           String methods
+  
+   1.  int length():- return the number of character in a string. "example".length();   //7
+   2. Char charAt() :- return the character at ith index.   "Example".charAt(3);  // m
+   3.String substring() :- return the substring from ith index.  character to end.   "example.subString(3);   //mple
+   4. String subString(int i,int j) :- return the substring i to j-1;   "example".substring(2,5);  //ample
+   5. String concat(String str) :- concat two string    "example ".concat("java");    / /example java
+   6. boolean equals(object, other object)  :- compare this string to specified object
+      for ex:-   "hello".equals("hello");  //true
+                     "Hello".equals("hello");  //false
+   7. boolean equalsIgnorecase(String anotherString):-    compare string to another string   
+    boolean out ="Example".equalsIgnoreCase("Example");     //return true
+     boolean out ="Example".equalsIgnoreCase("example");     //return false
+
+   8. int compareTo(String)  :-  compare two strings.    s1.compare(s2);
+
+   9. int compareToIgnoreCase(String anotherString):-  compare two string lexographically , ignoring case considerations
+    int out =s1.compareToIgnorecase(s2);    
+if:  out<0    // s1 comes before s2
+  out=0    // s1 and s2 are equal
+  out>0    //s1 comes after s2
+
+  10. String trim:-      removes the whitespace at both ends.  
+String word1  =   "     learn      ";
+ String word2 = "learn";
+
+
+                                                                                                       StringBuffer
+ 
+  1. reverse():-  this method is used to reverse the String. value is replaced by old string.
+  2. insert():-   this method is used to either string or character
+  3. append():- this method is used to add new string at the end of original string. 
+  4. replace();  replace any old string at with old string at index value.
+  5. deletecharAt():- delete a char at given index value.
+  6. delete():-    used to delete string from given string based on index value.
+  7. toString():-  used to convert mutable string value into immutable string
+
+
+                    string                                                                                     stringBuffer
+ 1   string class is immutable                                                           1  stringbuffer is mutable
+   2 slow and consumes more memory                                            2 fast and consumes less memory 
+ when you concat too many string                               
+  3 string class override equal method                                             3  StringBuffer doesnot override the 
+ so you can compare content of two string of object class                        equal method of object class
+
+
+                                                                                                  stringBuilder
+
+       stringBuilder is similar to stringbuffer . both are mutable
+
+      difference between stringBuffer and StringBuilder
+        string buffer is synchronized and stringbuilder is not synchronised.
+        stringbuffer is thread safe and string builder is not thread safe.
+       synchronized means one thread at a time.
+   
+
+
+                                                                                                  stringtokenizer
+
+     used to split the given string into tokens based on any special symbols.
+     
+     method of string tokenizer
+     hasMoreTokens()
+     nextToken()
+ 
+
+     hasMoreToken()
+     it is predefined method of String tokenizer class used to check whether given stringTokeniser having any elements or not
+
+     nextToken()
+     which can used to get the element from stringTokenizer.
+
+
+                                                                                 difference between method overloading and method overriding
+
+                          method overloading                                                        method overriding
+
+              1. used to increase readability of program.                                    1.  used to provide specific implementation of method
+              2. method overloading to perform within class.                              2. it occurs in two classes
+              3. parameter must be different                                                        3. parameter must be same
+              4. it is example of compile time polymorphism.                             4.  it is example of runtime polymorphism.
+              5. in java, it cannot be performed by changing return                   5.  return type must be same or convenient in method overriding
+               type of method only.
+
+                                
+                                                                                                   collection
+
+               public boolean add(E e)
+   {
+	  it is used to insert anelement in the collection 
+   }
+    public boolean addAll(Collection< ? extends e> c)
+    {
+    it is used to insert the specified collection elements in the invoking collection
+    }
+    public void remove(Object element)
+    {
+    it is used to delete an element from the collection.
+    }
+    public boolean removeAll(Collection <?> c)
+    {
+    used to delete all elements of specified collection from invoking collection.
+    }
+    default boolean removeall(Predicate <? super E > filter)
+    {
+    used to delete all elements of collection that specified predicate.
+    }
+    public int size()
+    {
+    return total number of elements in the collection
+    }
+    public void clear()
+    {
+    remove total number of  elements from collection
+    }
+    public boolean contains(Object element)
+    {
+    used to search an element.
+    }
+
+
+
+                                 list interface
+
+   list interface is sub interface of collection . it contains index based methods to insert and delete elements .it is factory of list index interface.
+
+       list interface decleration: -
+
+      public interfaceList<E> extends Collection<E>
+
+         list methods:- 
+
+     following are the important list methods java:-
+     Object get(int num) :- returns the element (as object)  existing at the specified index number. if the index num is given beyond the size of list
+     the method throws indexOutOfBoundException
+     
+      Object set(int num, Object obj):- used to replace element. return new element at specified number
+      void add(int num , Object obj);  insert the element obj at the mentioned index number
+
+     int indexOf(Object obj):- return index number of the element obj. if a number of element by the same name obj exist. it return the first           occurence . if no element by name obj exists. return -1, the same style of string class.     
+
+      int lastIndexOf(Object obj) :- if multiple elements exist , it return the last occurence of obj. return -1 , if no element by name of obj. exist. 
+            
+
+
+      autoboxing :- automatic conversion of primitive variable to its wrapper class.
+      unboxing :- conversion of wrapper class to its primitive data types.
+
+   difference between extends anssd implement
+           super and this keyword
+
+   to check how capacity increase in arraylist   
+
+    new capacity = (cc*3/2)+1;
+
+       arraylist
+  
+       1. boolean add(Element e)    // adding elements to the list
+       2. void add(int index, element e)       //element will add to the specific element
+       3. public int size()                   //specific size of element
+       4. lastIndexof()        // specifies the last index of element
+
+
+                                                                     LinkedList
+
+   1. boolean add(Object o)
+   2. boolean addAll(Collection c)      // add each element of given collection at the end of linked list
+   3. boolean addAll(int index , Collection c) :- add each element at the specific position type at given index in the argument
+   4. void addFirst(Object o) :- this method add the specific element at the first position of the list 
+   5. void addLast(Object o)
+   6. boolean contains(Object o)
+   7. Object get(int index):- return the element present in mentioned position in the linked list.
+    
+
+                                                                                 set
+
+   1. set is a child interface of collection.
+   2. if you want to represent a group of individual object as a single entity where duplicates are not allowed and insertion order is not preserved 
+    3. set interface does not contain any new methods. 
+
+
+                                                                             hashset
+
+  1. the underlined data structure is hash table
+  2. duplicates are not allowed if we are trying to insert duplicates we don't get any compile time or runtime errors. 
+      for ex - add method simply return false
+  3. insertion order is not preserved and all objects will be based on hashcode of the object.
+  4. hetrogeneous objects are allowed.
+  5. null insertion is allowed.
+  6. hashset is best choice if we frequent operation is search
+
+
+
+                                                                                linked hashset
+
+  1. child class of hashset.
+  2. the underlined data structure is hash table and linked list.
+  3. insertion order is preserved in linkedhashset.                    ****** 
+  4. duplicates data are not allowed.
+ 
+                                                                                   treeset
+
+  1. duplicate data not allowed.
+  2. insertion order not preserved but all objects we inserted is in some order
+  3. hetrogeneous object not allowed if we try then we get runtime exception (class class exception)
+  4. null insertion are allowed but only once.
+   5. for empty tree set is the first . 
+
+                               characterestic of map
+
+  1. bacause a map is not a true collection , its characterestics and behaviour are different then other collection then the other collection like list         or set.
+  2. map contain duplicate keys and each key can map the most one value
+   
+
+   object put(object key,object values)    // put is used to add something  
+   object key(object key);
+   object remove(object key);
+   boolean containskey(object key);
+   boolean containsvalue(object value);
+ int size();
+boolean isEmpty();
+  void putall();
+void clear();   
+
+  implementation of map
+    hashmap :- 
+  1. this implementation used hashtable.
+  2. it permit null. it doesnot gurantee the order of its key value element
+  3. hashmap order doesnot matter and nulls are acceptable.
+
+
+      linked hashmap:- 
+ underlying DS , thus the order is predictable with insertion order as default order. consider using a linkedhashmap , when you want a map with   key value are sorted by insertion order.      
+
+ 
+                        ques:-  what is loadfactor?
+      after loading , how much factor a new hashset object is created. what factor is  called load factor or 	
+
+                                                           questions 
+
+   ques:-   1. fibonacci series     
+                2. string pallidrome
+                3. integer pallidrome
+                4. armstrong number
+                5. factorial
+                6. gcd of two number
+                7. squareroot function                                                           
+
+                                                                    exception
+
+
+      case 1: - if there is no exception
+            1,2,3,5 normal termination
+
+      case 2:- if an exception raised at statement 2 corrosponding catch block method
+           1,4,5 normal termination.
+ 
+      case 3:- if an raised at statement 2 and corrosponding catch block not matched
+          1... abnormal condition
+
+    1      try {      
+             
+                 }
+            catch(x e) {    }
+
+    2     try {     }
+           catch(x  e) {   }
+           catch(x  e){   }    // exception x has already beem caught
+
+    3     try {  }
+           catch(x  e) {   }
+           catch(x  e)  {   }
+
+    4     try  {   }
+           catch(Exception e) {    }
+           catch(x  e)    {   }
+
+    5      try {  }
+            catch(AE e) {  }
+            catch(Exception e)  {   }
+ 
+    6      try{  }
+            ce:- try without catch or finally
+
+   7     catch(x e) { } 
+          ce:- catch without try
+
+   8     finally  {   }
+          ce:- finally without try
+ 
+           
+   9    try {   }
+         finally {   }
+
+  10   try {  }
+         sop("helo");
+         catch(exception e) {  }
+         ce:- try without catch or finally  and catch without try
+
+  11  try { }
+        catch(Exception e) {   }
+        sop("hello");
+        catch(y e) {  }
+        ce:- catch without try 
+
+  12 . try {   }
+         catch(x e) {   }
+         sop("hello");
+         finally  {  }
+         ce:- finally without try    
+
+   13   try { }
+           catch(X  e)  { }
+           try{} 
+           finally  {           }
+ 
+   14    try {  }
+           finally {   }
+           catch(x e) {   }
+           CE:- catch without finally
+
+   15.   try{  }
+           catch(x  e)
+           finally {   }
+           finally{   }  
+           CE:- finally without try 
+
+    16.  try  {  }
+           catch(x e) {   }
+           finally  {  }
+           catch(x   e)   {  } 
+
+     17 try {  }
+         catch {
+           try {   }
+           finally {  }
+           }
+ 
+      18 try  {  }
+           catch( x e)  {  }
+            finally { 
+               try {  }
+             finally  {  }
+             }
+
+      19 try {  
+            try {
+              }  }
+            catch( x e)  {  }    CE:- try without catch or finally
+
+      20     try
+               sop("hello");
+               catch(x   e) {    }
+
+      21   try {   }
+             catch(x  e) 
+             sop("Catch");
+
+       22   try  {  }
+               catch{  } 
+               finally {  sop("final");
+               }
